@@ -1,3 +1,3 @@
-Go based presentations
+Go based presentations   
  — — — — — — — — — — — 
-* [Golang Basics](https://talks.godoc.org/github.com/dejdyla/go-introduction/introduction.slide)
+* [Introduction to Go](https://talks.godoc.org/github.com/dejdyla/go-introduction/introduction.slide#1)
