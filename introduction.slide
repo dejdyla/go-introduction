@@ -1,0 +1,115 @@
+# Introduction to Golang
+20 Oct 2020
+
+Denis Kasanič
+Software Developer, PDS Tieto
+denis.kasanic@tieto.com
+
+## License
+
+Some content of this presentation is drawn from talk [Go concurrency patterns](https://talks.golang.org/2012/concurrency.slide#1) by Rob Pike 
+
+## Agenda
+
+- What is Go
+- Go types
+- Interfaces
+- Concurrency mechanisms
+- Learning materials
+
+.image images/golang-mascot.png
+
+## Go
+
+- statically type-checked
+- compiled
+- garbage-collected
+- has run-time reflection
+- strong suppot for concurrency
+- simple
+- no generics (yet?)
+
+## Hello world Golang way
+
+.play code/hello-world.go
+
+## Variables
+
+- declaration and initialization
+
+.code code/declaration.go /START LONG/,/END LONG/
+or
+
+.code code/declaration.go /START SHORT/,/END SHORT/
+
+## Golang types
+
+basic
+  - numeric, boolean, string
+  - error (built-in interface) 
+  // not so usual
+
+composite
+  - pointer
+  - array, slice, map
+  - struct
+  - function
+  - channel
+
+abstract
+  - interface
+
+## Interfaces
+
+- abstract type
+- defined as set of methods
+- a value can hold any type that implements these methods
+- implemented __implicitly__
+- empty interface is implemented by anything
+
+##
+.play code/interface.go /START OMIT/,/END OMIT/
+
+## Concurrency mechanisms
+
+## Goroutines
+[Concurrency is not parallelism!](https://blog.golang.org/waza-talk)
+
+- independently executing function
+- very cheap
+// like it's practical of hundreds of thousands of them
+- not a thread (just behaves like one)
+
+.play code/goroutines.go /START OMIT/,/END OMIT/
+
+// when hear about concurrency, people often think of paralelism
+// from Rob Pike, 2012
+
+## Channels
+
+- connections between concurrent goroutines
+
+.play code/channels.go /START OMIT/,/END OMIT/
+
+## Select
+
+- like switch but case statements refer to communication
+
+.play code/select.go /START OMIT/,/END OMIT/
+
+## Useful learning materials
+
+- [Online Tour of Go](https://tour.golang.org/welcome/1)
+- [Go by example](https://gobyexample.com/)
+- [Effective go](https://golang.org/doc/effective_go.html)
+- [Go Wiki](https://github.com/golang/go/wiki)
+
+Selection of articles from Go blog:
+
+- [Go concurrency patterns](https://blog.golang.org/pipelines)
+- [Advanced concurrency patterns](https://blog.golang.org/io2013-talk-concurrency)
+- [Share Memory By Communicating](https://blog.golang.org/codelab-share)
+- [Error Handling and Go](https://blog.golang.org/error-handling-and-go)
+- [Working with Errors in Go 1.13](https://blog.golang.org/go1.13-errors)
+- [Go Race Detector](https://blog.golang.org/race-detector)
+- [Using Go Modules](https://blog.golang.org/using-go-modules)
