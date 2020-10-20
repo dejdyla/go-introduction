@@ -1,15 +1,15 @@
-# Introduction to Golang
+Introduction to Golang
 20 Oct 2020
 
 Denis Kasanič
 Software Developer, PDS Tieto
 denis.kasanic@tieto.com
 
-## License
+* License
 
-Some content of this presentation is drawn from talk [Go concurrency patterns](https://talks.golang.org/2012/concurrency.slide#1) by Rob Pike 
+Some content of this presentation is drawn from talk [[https://talks.golang.org/2012/concurrency.slide#1][Go concurrency patterns]] by Rob Pike 
 
-## Agenda
+* Agenda
 
 - What is Go
 - Go types
@@ -19,7 +19,7 @@ Some content of this presentation is drawn from talk [Go concurrency patterns](h
 
 .image images/golang-mascot.png
 
-## Go
+* Go
 
 - statically type-checked
 - compiled
@@ -29,11 +29,11 @@ Some content of this presentation is drawn from talk [Go concurrency patterns](h
 - simple
 - no generics (yet?)
 
-## Hello world Golang way
+* Hello world Golang way
 
 .play code/hello-world.go
 
-## Variables
+* Variables
 
 - declaration and initialization
 
@@ -42,12 +42,11 @@ or
 
 .code code/declaration.go /START SHORT/,/END SHORT/
 
-## Golang types
+* Golang types
 
 basic
   - numeric, boolean, string
-  - error (built-in interface) 
-  // not so usual
+  - error (built-in interface) // not so usual
 
 composite
   - pointer
@@ -59,7 +58,7 @@ composite
 abstract
   - interface
 
-## Interfaces
+* Interfaces
 
 - abstract type
 - defined as set of methods
@@ -67,49 +66,45 @@ abstract
 - implemented __implicitly__
 - empty interface is implemented by anything
 
-##
+*
 .play code/interface.go /START OMIT/,/END OMIT/
 
-## Concurrency mechanisms
+* Concurrency mechanisms
 
-## Goroutines
-[Concurrency is not parallelism!](https://blog.golang.org/waza-talk)
+* Goroutines
+[[https://blog.golang.org/waza-talk][Concurrency is not parallelism!]]
 
 - independently executing function
 - very cheap
-// like it's practical of hundreds of thousands of them
 - not a thread (just behaves like one)
 
 .play code/goroutines.go /START OMIT/,/END OMIT/
 
-// when hear about concurrency, people often think of paralelism
-// from Rob Pike, 2012
-
-## Channels
+* Channels
 
 - connections between concurrent goroutines
 
 .play code/channels.go /START OMIT/,/END OMIT/
 
-## Select
+* Select
 
 - like switch but case statements refer to communication
 
 .play code/select.go /START OMIT/,/END OMIT/
 
-## Useful learning materials
+* Useful learning materials
 
-- [Online Tour of Go](https://tour.golang.org/welcome/1)
-- [Go by example](https://gobyexample.com/)
-- [Effective go](https://golang.org/doc/effective_go.html)
-- [Go Wiki](https://github.com/golang/go/wiki)
+- [[https://tour.golang.org/welcome/1][Online Tour of Go]]
+- [[https://gobyexample.com/][Go by example]]
+- [[https://golang.org/doc/effective_go.html][Effective go]]
+- [[https://github.com/golang/go/wiki][Go Wiki]]
 
 Selection of articles from Go blog:
 
-- [Go concurrency patterns](https://blog.golang.org/pipelines)
-- [Advanced concurrency patterns](https://blog.golang.org/io2013-talk-concurrency)
-- [Share Memory By Communicating](https://blog.golang.org/codelab-share)
-- [Error Handling and Go](https://blog.golang.org/error-handling-and-go)
-- [Working with Errors in Go 1.13](https://blog.golang.org/go1.13-errors)
-- [Go Race Detector](https://blog.golang.org/race-detector)
-- [Using Go Modules](https://blog.golang.org/using-go-modules)
+- [[https://blog.golang.org/pipelines][Go concurrency patterns]]
+- [[https://blog.golang.org/io2013-talk-concurrency][Advanced concurrency patterns]]
+- [[https://blog.golang.org/codelab-share][Share Memory By Communicating]]
+- [[https://blog.golang.org/error-handling-and-go][Error Handling and Go]]
+- [[https://blog.golang.org/go1.13-errors][Working with Errors in Go 1.13]]
+- [[https://blog.golang.org/race-detector][Go Race Detector]]
+- [[https://blog.golang.org/using-go-modules][Using Go Modules]]
